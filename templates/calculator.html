@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Calculator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="calculator">
+    <form method="POST">
+
+
+        <input
+            type="text"
+            name="display"
+            class="display"
+            value="{{ result if result else expression }}"
+            readonly
+        >
+
+        <div class="buttons">
+            <button type="button">C</button>
+            <button type="button">DEL</button>
+            <button type="button">%</button>
+            <button type="button">/</button>
+
+            <button type="button">7</button>
+            <button type="button">8</button>
+            <button type="button">9</button>
+            <button type="button">*</button>
+
+            <button type="button">4</button>
+            <button type="button">5</button>
+            <button type="button">6</button>
+            <button type="button">-</button>
+
+            <button type="button">1</button>
+            <button type="button">2</button>
+            <button type="button">3</button>
+            <button type="button">+</button>
+
+            <button type="button">0</button>
+            <button type="button">.</button>
+            <button type="submit" class="equal">=</button>
+        </div>
+
+    </form>
+</div>
+
+<script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
